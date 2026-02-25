@@ -32,3 +32,15 @@ function rollDice() {
 
     // set element
     image2.setAttribute("src", randomDice2);
+    // Who wins?
+    if (randomNumber1 > randomNumber2) {
+        document.querySelector("h1").innerHTML = "😎 Player one wins"; // Change h1 text
+        document.querySelector("h1").style.color = "#fefae0"; // Change h1 color
+        document.body.style.backgroundColor = "#14213d"; // Change page background color
+        document.querySelectorAll("p")[0].style.color = "#fefae0"; // Change the text color like h1
+        document.querySelectorAll("p")[0].style.textShadow = '0 0 30px #fefae0'; // Add a glow to the text
+    
+        // Reset styles for the other paragraph for every refresh
+        document.querySelectorAll("p")[1].style.color = "";
+        document.querySelectorAll("p")[1].style.textShadow = '';
+    }
