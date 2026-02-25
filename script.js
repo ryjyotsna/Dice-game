@@ -66,3 +66,7 @@ function rollDice() {
         document.querySelectorAll("p")[1].style.textShadow = '';
     }
 }
+// Get the button element and add a click event listener
+const button = document.querySelector("button");
+button.addEventListener("click", rollDice);
+
