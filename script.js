@@ -44,3 +44,25 @@ function rollDice() {
         document.querySelectorAll("p")[1].style.color = "";
         document.querySelectorAll("p")[1].style.textShadow = '';
     }
+    else if (randomNumber2 > randomNumber1) {
+        document.querySelector("h1").innerHTML = "Player two wins 😎"
+        document.querySelector("h1").style.color = "#ffddd2";
+        document.body.style.backgroundColor = "#3d405b";
+        document.querySelectorAll("p")[1].style.color = "#ffddd2";
+        document.querySelectorAll("p")[1].style.textShadow = '0 0 30px #ffddd2';
+    
+        // Reset styles for the other paragraph
+        document.querySelectorAll("p")[0].style.color = "";
+        document.querySelectorAll("p")[0].style.textShadow = '';
+    }
+    else {
+        document.querySelector("h1").innerHTML = "Draw! 🤝";
+    
+        // Reset styles for both paragraphs in case of a draw
+        document.body.style.backgroundColor = "#393E46";
+        document.querySelectorAll("p")[0].style.color = "";
+        document.querySelectorAll("p")[0].style.textShadow = '';
+        document.querySelectorAll("p")[1].style.color = "";
+        document.querySelectorAll("p")[1].style.textShadow = '';
+    }
+}
